@@ -1,6 +1,7 @@
 'use client'
 
 import { Button } from '@/components/ui/button'
+import Image from 'next/image'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 
@@ -19,12 +20,24 @@ export function Hero() {
 
   return (
     <section className="relative w-full min-h-[90vh] flex items-center overflow-hidden">
-      {/* Background with gradient mesh */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-primary/5" />
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <Image
+          src="/hero-tech.jpg"
+          alt="Fondo tecnológico moderno"
+          fill
+          className="object-cover"
+          priority
+          quality={90}
+        />
+        {/* Overlay gradients for better text readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/70" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/50" />
+      </div>
       
       {/* Decorative grid pattern */}
       <div 
-        className="absolute inset-0 opacity-[0.03]"
+        className="absolute inset-0 opacity-[0.02]"
         style={{
           backgroundImage: `linear-gradient(to right, currentColor 1px, transparent 1px),
                             linear-gradient(to bottom, currentColor 1px, transparent 1px)`,
@@ -33,8 +46,8 @@ export function Hero() {
       />
 
       {/* Decorative gradient orbs */}
-      <div className="absolute top-20 right-[15%] w-[500px] h-[500px] bg-primary/10 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-10 left-[10%] w-[400px] h-[400px] bg-accent/10 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute top-20 right-[15%] w-[500px] h-[500px] bg-primary/15 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-10 left-[10%] w-[400px] h-[400px] bg-accent/15 rounded-full blur-[100px] pointer-events-none" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 lg:py-32 w-full">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
