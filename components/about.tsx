@@ -34,12 +34,7 @@ const advantages = [
   },
 ]
 
-const stats = [
-  { value: '15+', label: 'Años en el mercado' },
-  { value: '300+', label: 'Proyectos entregados' },
-  { value: '98%', label: 'Clientes satisfechos' },
-  { value: '24/7', label: 'Soporte disponible' },
-]
+
 
 export function About() {
   return (
@@ -60,15 +55,7 @@ export function About() {
           </p>
         </div>
 
-        {/* Stats Bar */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16 p-6 bg-background rounded-2xl border border-border shadow-sm">
-          {stats.map((stat) => (
-            <div key={stat.label} className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-primary mb-1">{stat.value}</div>
-              <div className="text-sm text-muted-foreground">{stat.label}</div>
-            </div>
-          ))}
-        </div>
+
 
         {/* Advantages Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
