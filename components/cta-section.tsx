@@ -3,29 +3,6 @@
 import Link from 'next/link'
 
 export function CTASection() {
-  const benefits = [
-    {
-      metric: '300+',
-      label: 'Proyectos Implementados',
-      description: 'En empresas de todos los tamaños',
-    },
-    {
-      metric: '98%',
-      label: 'Tasa de Satisfacción',
-      description: 'Clientes que renuevan sus servicios',
-    },
-    {
-      metric: '15+',
-      label: 'Años de Experiencia',
-      description: 'En desarrollo y soluciones digitales',
-    },
-    {
-      metric: '24/7',
-      label: 'Soporte Dedicado',
-      description: 'Para tu tranquilidad operativa',
-    },
-  ]
-
   return (
     <section className="relative w-full py-24 md:py-32 bg-gradient-to-b from-background via-background to-primary/5">
       {/* Decorative elements */}
@@ -71,32 +48,6 @@ export function CTASection() {
           <p className="text-sm text-muted-foreground">
             Sin compromisos. Respuesta en menos de 24 horas.
           </p>
-        </div>
-
-        {/* Benefits Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {benefits.map((benefit) => (
-            <div
-              key={benefit.metric}
-              className="group relative p-6 rounded-2xl bg-card border border-border hover:border-primary/30 hover:shadow-lg hover:shadow-primary/10 transition-all duration-300"
-            >
-              {/* Gradient overlay on hover */}
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
-
-              {/* Content */}
-              <div className="relative">
-                <div className="text-3xl md:text-4xl font-bold text-primary mb-2">
-                  {benefit.metric}
-                </div>
-                <h3 className="text-base font-semibold text-foreground mb-1">
-                  {benefit.label}
-                </h3>
-                <p className="text-sm text-muted-foreground">
-                  {benefit.description}
-                </p>
-              </div>
-            </div>
-          ))}
         </div>
 
         {/* Trust indicators */}
