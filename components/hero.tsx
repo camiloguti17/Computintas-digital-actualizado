@@ -1,7 +1,6 @@
 'use client'
 
 import { Button } from '@/components/ui/button'
-import Image from 'next/image'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 
@@ -13,20 +12,9 @@ export function Hero() {
   }, [])
 
   return (
-    <section className="relative w-full min-h-[90vh] flex items-center overflow-hidden">
-      {/* Background Image */}
-      <div className="absolute inset-0">
-        <Image
-          src="/hero-background.jpg"
-          alt="Fondo tecnológico moderno"
-          fill
-          className="object-cover"
-          priority
-        />
-        {/* Overlay gradients for better text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/70 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/30" />
-      </div>
+    <section className="relative w-full min-h-[90vh] flex items-center overflow-hidden bg-[#0a0a0a]">
+      {/* Subtle gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#0a0a0a] via-[#111111] to-[#0a0a0a]" />
 
       {/* Decorative gradient orbs */}
       <div className="absolute top-20 right-[15%] w-[500px] h-[500px] bg-primary/10 rounded-full blur-[120px] pointer-events-none" />
